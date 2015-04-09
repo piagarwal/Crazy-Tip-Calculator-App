@@ -1,0 +1,248 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/Relativelayout"
+    android:background="#ff59ceff">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bill_text_view"
+        android:id="@+id/billTextView"
+        android:layout_marginLeft="2dp"
+        android:layout_marginStart="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billeditText"
+
+        android:ems = "5"
+        android:layout_marginLeft="10dp"
+
+
+        android:layout_toRightOf="@+id/billTextView"
+        android:layout_alignBaseline="@+id/billTextView"
+        android:inputType="numberDecimal"
+        android:hint="0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_text_view"
+        android:id="@+id/tipTextView"
+        android:layout_alignTop="@+id/billTextView"
+        android:layout_toRightOf="@+id/billeditText"
+
+        android:layout_marginLeft="20dp"
+       />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipEditText"
+
+        android:text="@string/tip_edit_text"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:layout_alignBaseline="@id/tipTextView"
+        android:layout_toRightOf="@+id/tipTextView"
+        android:layout_toEndOf="@+id/tipTextView"
+        android:layout_marginLeft="10dp"
+        android:editable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/final_text_view"
+        android:id="@+id/finalTextView"
+        android:layout_below="@+id/billeditText"
+        android:layout_marginTop="34dp"
+        android:layout_alignRight="@id/tipTextView"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finalEditText"
+        android:layout_below="@+id/tipEditText"
+        android:layout_toRightOf="@+id/finalTextView"
+        android:layout_toEndOf="@+id/finalTextView"
+        android:layout_marginLeft="10dp"
+        android:ems = "5"
+        android:inputType="numberDecimal"
+        android:text="@string/final_bill_edit_text"
+        android:layout_alignBaseline="@id/finalTextView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/change_tip_text_view"
+        android:id="@+id/changeTipTextView"
+        android:layout_below="@+id/finalEditText"
+
+        android:layout_alignLeft="@id/billeditText"
+        android:layout_alignBaseline="@id/finalTextView"
+        />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/finalEditText"
+        android:layout_alignLeft="@id/changeTipTextView"
+        android:layout_marginTop="25dp"
+        android:layout_toLeftOf="@id/finalTextView"
+        android:progress="0"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/into_text_view"
+        android:id="@+id/introTextView"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginTop="25dp"
+        android:layout_alignLeft="@id/billTextView" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_friendly_text_view"
+        android:id="@+id/friendlyCheckBox"
+        android:layout_below="@+id/introTextView"
+        android:layout_alignLeft="@id/introTextView"
+        android:layout_marginTop="10dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_special_text_view"
+        android:id="@+id/specialCheckBox"
+        android:layout_alignBaseline="@id/friendlyCheckBox"
+        android:layout_toRightOf="@id/friendlyCheckBox"
+        android:layout_marginLeft="15dp"
+         />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/intro_opinion_text_view"
+        android:id="@+id/opinionCheckBox"
+        android:layout_alignBaseline="@id/specialCheckBox"
+        android:layout_toRightOf="@id/specialCheckBox"
+        android:layout_marginLeft="15dp"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/available_text_view"
+        android:id="@+id/availableTextView"
+
+        android:layout_alignLeft="@+id/introTextView"
+        android:layout_below="@id/friendlyCheckBox"
+        android:layout_marginTop="25dp"
+         />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/availableTextView"
+        android:id="@+id/availableRadioGroup"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_alignLeft="@id/availableTextView">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_good_radiobutton"
+            android:id="@+id/goodRadioButton"
+
+
+        />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_ok_radiobutton"
+            android:id="@+id/okRadioButton"
+            android:layout_marginLeft="15dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_bad_radiobutton"
+            android:id="@+id/badRadioButton"
+            android:layout_marginLeft="15dp" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/problemSpinner"
+        android:layout_below="@+id/availableRadioGroup"
+        android:layout_alignLeft="@id/availableTextView"
+        android:layout_marginTop="25dp"
+        android:layout_alignRight="@id/specialCheckBox"
+        android:entries="@array/problem_solving" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_waiting_text_view"
+        android:id="@+id/timeWaitingTextView"
+        android:layout_below="@+id/problemSpinner"
+        android:layout_alignLeft="@id/problemSpinner"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_chronometer_button"
+        android:id="@+id/startChronometerbutton"
+        android:layout_below="@id/timeWaitingTextView"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/timeWaitingTextView" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause_chronometer_button"
+        android:id="@+id/pauseChronometerbutton"
+        android:layout_alignBaseline="@id/startChronometerbutton"
+        android:layout_toRightOf="@id/startChronometerbutton"
+        android:layout_marginLeft="15dp"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_chronometer_button"
+        android:id="@+id/resetChronometerbutton"
+        android:layout_alignBaseline="@id/startChronometerbutton"
+        android:layout_toRightOf="@id/pauseChronometerbutton"
+        android:layout_marginLeft="15dp" />
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timeWaitingChronometer"
+        android:layout_alignBaseline="@id/timeWaitingTextView"
+        android:layout_toRightOf="@+id/timeWaitingTextView"
+        android:layout_marginLeft="15dp" />
+
+
+</RelativeLayout>
